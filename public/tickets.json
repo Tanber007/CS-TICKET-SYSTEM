@@ -1,0 +1,137 @@
+[
+  {
+    "ticket_id": "#1001",
+    "title": "Login Issues: Can't Access Account",
+    "description": "Customer is unable to log in to their account. They've tried resetting their password multiple times but still...",
+    "priority": "HIGH_PRIORITY",
+    "status": "Open",
+    "assigned_to": "John Smith",
+    "created_at": "1/15/2024"
+  },
+  {
+    "ticket_id": "#1003",
+    "title": "Unable to Download Invoice",
+    "description": "Customer cannot download their January invoice from the billing section. The download button is...",
+    "priority": "MEDIUM_PRIORITY",
+    "status": "In_Progress",
+    "assigned_to": "Michael Brown",
+    "created_at": "1/17/2024"
+  },
+  {
+    "ticket_id": "#1005",
+    "title": "App Crash on Launch",
+    "description": "Customer reports that the mobile app crashes immediately upon opening on Android 13.",
+    "priority": "HIGH_PRIORITY",
+    "status": "Open",
+    "assigned_to": "David Wilson",
+    "created_at": "1/19/2024"
+  },
+  {
+    "ticket_id": "#1006",
+    "title": "Password Reset Email Not Sent",
+    "description": "Users are reporting they are not receiving the recovery emails even after checking spam folders.",
+    "priority": "MEDIUM_PRIORITY",
+    "status": "Open",
+    "assigned_to": "Sarah Johnson",
+    "created_at": "1/20/2024"
+  },
+  {
+    "ticket_id": "#1007",
+    "title": "UI Glitch in Dashboard",
+    "description": "The sidebar overlaps with the main content on smaller screen resolutions (1366x768).",
+    "priority": "LOW_PRIORITY",
+    "status": "In_Progress",
+    "assigned_to": "Emily Davis",
+    "created_at": "1/21/2024"
+  },
+  {
+    "ticket_id": "#1008",
+    "title": "Payment Gateway Timeout",
+    "description": "Customers are getting a 504 error when attempting to process credit card payments.",
+    "priority": "HIGH_PRIORITY",
+    "status": "Open",
+    "assigned_to": "James Miller",
+    "created_at": "1/22/2024"
+  },
+  {
+    "ticket_id": "#1009",
+    "title": "Slow Page Load Times",
+    "description": "The reports page takes more than 10 seconds to load for accounts with large datasets.",
+    "priority": "MEDIUM_PRIORITY",
+    "status": "In_Progress",
+    "assigned_to": "Jessica Taylor",
+    "created_at": "1/23/2024"
+  },
+  {
+    "ticket_id": "#1010",
+    "title": "Broken Link in Help Center",
+    "description": "The 'Contact Support' link in the footer leads to a 404 page.",
+    "priority": "LOW_PRIORITY",
+    "status": "Open",
+    "assigned_to": "Robert Wilson",
+    "created_at": "1/24/2024"
+  },
+  {
+    "ticket_id": "#1011",
+    "title": "Missing Export Data Feature",
+    "description": "Requested feature: Users want to export their ticket history into a CSV file format.",
+    "priority": "MEDIUM_PRIORITY",
+    "status": "In_Progress",
+    "assigned_to": "Linda Martinez",
+    "created_at": "1/25/2024"
+  },
+  {
+    "ticket_id": "#1012",
+    "title": "Email Notifications Lagging",
+    "description": "System alerts are arriving 30 to 45 minutes after the event actually occurred.",
+    "priority": "MEDIUM_PRIORITY",
+    "status": "Open",
+    "assigned_to": "William Anderson",
+    "created_at": "1/26/2024"
+  },
+  {
+    "ticket_id": "#1013",
+    "title": "Database Connection Error",
+    "description": "Recurring 'Connection Lost' errors during peak hours of 2 PM to 4 PM EST.",
+    "priority": "HIGH_PRIORITY",
+    "status": "In_Progress",
+    "assigned_to": "Thomas Garcia",
+    "created_at": "1/27/2024"
+  },
+  {
+    "ticket_id": "#1014",
+    "title": "Search Bar No Results",
+    "description": "Searching for exact ticket IDs often returns 'No Results Found' even when the ID exists.",
+    "priority": "MEDIUM_PRIORITY",
+    "status": "Open",
+    "assigned_to": "Karen White",
+    "created_at": "1/28/2024"
+  },
+  {
+    "ticket_id": "#1015",
+    "title": "Dark Mode Contrast Issues",
+    "description": "In dark mode, the secondary text is too dark and almost unreadable against the background.",
+    "priority": "LOW_PRIORITY",
+    "status": "In_Progress",
+    "assigned_to": "Chris Thompson",
+    "created_at": "1/29/2024"
+  },
+  {
+    "ticket_id": "#1016",
+    "title": "Profile Picture Upload Fail",
+    "description": "Users receive an 'Invalid File Type' error even when uploading JPG or PNG images under 2MB.",
+    "priority": "LOW_PRIORITY",
+    "status": "Open",
+    "assigned_to": "Nancy Robinson",
+    "created_at": "1/30/2024"
+  },
+  {
+    "ticket_id": "#1017",
+    "title": "API Key Generation Error",
+    "description": "Developers cannot generate new API keys from the settings panel. Returns a 500 server error.",
+    "priority": "HIGH_PRIORITY",
+    "status": "Open",
+    "assigned_to": "Daniel Clark",
+    "created_at": "1/31/2024"
+  }
+]

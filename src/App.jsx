@@ -1,5 +1,13 @@
+import { Suspense } from 'react'
 import './App.css'
 import HeroSection from './Components/HeroSection/HeroSection'
+import Tickets from './Components/Tickets/Tickets'
+
+const fetchTickets =async()=>{
+  const res = await fetch("/tickets.json")
+  return res.json()
+}
+const ticketsPromise = fetchTickets()
 
 function App() {
 
@@ -51,7 +59,9 @@ function App() {
 
   {/* Hero Section **/}
     <HeroSection></HeroSection>
-      
+    
+    {/* Tickets Section */}
+    <Suspense fallback={<div className="text-center p-10">Loading Tickets...</div>}><Tickets ticketsPromise={ticketsPromise}></Tickets></Suspense>
     </>
   )
 }
