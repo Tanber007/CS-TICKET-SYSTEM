@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import HeroSection from './Components/HeroSection/HeroSection'
 import Tickets from './Components/Tickets/Tickets'
@@ -10,6 +10,10 @@ const fetchTickets =async()=>{
 const ticketsPromise = fetchTickets()
 
 function App() {
+
+  const [purchasedTickets, setPurchasedTickets] = useState([])
+
+  console.log(purchasedTickets);
 
   return (
     <>
@@ -61,7 +65,9 @@ function App() {
     <HeroSection></HeroSection>
     
     {/* Tickets Section */}
-    <Suspense fallback={<div className="text-center p-10">Loading Tickets...</div>}><Tickets ticketsPromise={ticketsPromise}></Tickets></Suspense>
+    <Suspense fallback={<div className="text-center p-10">Loading Tickets...</div>}>
+          <Tickets purchasedTickets={purchasedTickets} setPurchasedTickets={setPurchasedTickets} ticketsPromise={ticketsPromise}></Tickets>
+    </Suspense>
     </>
   )
 }

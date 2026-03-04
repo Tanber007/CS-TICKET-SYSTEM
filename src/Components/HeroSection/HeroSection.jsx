@@ -1,4 +1,3 @@
-import React from 'react';
 import bgImge1 from "../../assets/vector1.png";
 import bgImge2 from "../../assets/vector2.png";
 
