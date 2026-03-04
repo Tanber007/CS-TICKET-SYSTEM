@@ -12,6 +12,7 @@ const ticketsPromise = fetchTickets()
 function App() {
 
   const [purchasedTickets, setPurchasedTickets] = useState([])
+ 
 
   console.log(purchasedTickets);
 

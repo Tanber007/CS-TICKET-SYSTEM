@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import ShowCard from '../ShowCard/ShowCard';
+import TaskStatus from '../TaskStatus/TaskStatus';
 
 const Tickets = ({ ticketsPromise, setPurchasedTickets, purchasedTickets }) => {
     const ticketsData = use(ticketsPromise);
@@ -20,10 +21,10 @@ const Tickets = ({ ticketsPromise, setPurchasedTickets, purchasedTickets }) => {
             </div>
 
 
-            <div className='w-1/3'>
+            <div className='w-1/3 pl-5'>
                 <div>
                     <h1 className='text-4xl font-bold mb-4'>Task Status</h1>
-
+                        <TaskStatus></TaskStatus>
                 </div>
 
                 <div>
