@@ -1,11 +1,10 @@
-const ShowCard = ({ cards, purchasedTickets, setPurchasedTickets }) => {
+const ShowCard = ({ cards, handleTicketClick, purchasedTickets, setPurchasedTickets }) => {
     
     const handleSelected = (ticketData) => {
-        // FIXED: Use 'prev' to ensure state consistency
         setPurchasedTickets([...purchasedTickets, ticketData]);
+        handleTicketClick(ticketData);
     };
 
-    // CLEANER: Use objects for mapping styles
     const priorityStyles = {
         HIGH_PRIORITY: "text-red-500",
         MEDIUM_PRIORITY: "text-yellow-500",
@@ -27,7 +26,6 @@ const ShowCard = ({ cards, purchasedTickets, setPurchasedTickets }) => {
                 <h2 className="text-lg font-semibold text-gray-800">
                     {cards.title}
                 </h2>
-                {/* FIXED: Dynamic background and text color based on status */}
                 <span className={`px-3 py-1 rounded-full text-sm font-medium ${statusStyles[cards.status] || "bg-gray-100 text-gray-700"}`}>
                     {cards.status}
                 </span>
@@ -40,14 +38,12 @@ const ShowCard = ({ cards, purchasedTickets, setPurchasedTickets }) => {
             <div className="flex flex-wrap items-center justify-between mt-4 text-sm">
                 <div className="flex items-center gap-3">
                     <span className="text-gray-500 font-mono">{cards.ticket_id}</span>
-                    {/* Applying the priority color */}
                     <span className={`${priorityStyles[cards.priority]} font-bold`}>
-                        {cards.priority.split('_')[0]} {/* Shows 'HIGH' instead of 'HIGH_PRIORITY' */}
+                        {cards.priority.split()} 
                     </span>
                 </div>
 
                 <div className="flex items-center gap-4 text-gray-500">
-                    {/* Note: You might want cards.assigned_to here instead of static text */}
                     <span>{cards.assigned_to}</span>
                     <div className="flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

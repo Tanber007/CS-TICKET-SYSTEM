@@ -7,14 +7,18 @@ const fetchTickets =async()=>{
   const res = await fetch("/tickets.json")
   return res.json()
 }
-const ticketsPromise = fetchTickets()
+const ticketsPromise = fetchTickets();
 
 function App() {
 
-  const [purchasedTickets, setPurchasedTickets] = useState([])
- 
+  const [purchasedTickets, setPurchasedTickets] = useState([]);
+  const [In_Progress, setIn_Progress] = useState(0);
 
-  console.log(purchasedTickets);
+  // Incrige the In_Progress value
+  const handleTicketClick = (ticketData) => {
+    setIn_Progress(prev => prev + 1);
+    setPurchasedTickets(prev => [...prev, ticketData]);
+  };
 
   return (
     <>
@@ -63,11 +67,11 @@ function App() {
 
 
   {/* Hero Section **/}
-    <HeroSection></HeroSection>
+    <HeroSection In_Progress={In_Progress}></HeroSection>
     
     {/* Tickets Section */}
     <Suspense fallback={<div className="text-center p-10">Loading Tickets...</div>}>
-          <Tickets purchasedTickets={purchasedTickets} setPurchasedTickets={setPurchasedTickets} ticketsPromise={ticketsPromise}></Tickets>
+          <Tickets handleTicketClick={handleTicketClick} purchasedTickets={purchasedTickets} setPurchasedTickets={setPurchasedTickets} ticketsPromise={ticketsPromise}></Tickets>
     </Suspense>
     </>
   )
