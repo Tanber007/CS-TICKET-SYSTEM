@@ -55,7 +55,7 @@ function App() {
           </div>
 
           <div className='flex justify-between'>
-            <a class="btn btn-ghost text-xl">daisyUI</a>
+            <a class="btn btn-ghost text-xl">CS-TICKET SYSTEM</a>
           </div>
 
 
@@ -93,6 +93,74 @@ function App() {
           resolvedTickets={resolvedTickets}
         ></Tickets>
       </Suspense>
+
+
+
+      {/* Footer */}
+
+      <footer class="bg-black text-gray-400 px-10 py-16 font-sans">
+        <div class="mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12">
+          <div class="lg:col-span-1">
+            <h2 class="text-white text-xl font-bold mb-6">CS — Ticket System</h2>
+            <p class="text-[14px] leading-[1.6] text-gray-400">
+              This project, CS — Ticket System, is a React-based web application designed to help users manage and track customer support tickets through a simple, interactive workflow.
+            </p>
+          </div>
+
+          <div class="lg:pl-10">
+            <h3 class="text-white text-[17px] font-semibold mb-6">Company</h3>
+            <ul class="space-y-4 text-[14px]">
+              <li class="hover:text-white cursor-pointer">About Us</li>
+              <li class="hover:text-white cursor-pointer">Our Mission</li>
+              <li class="hover:text-white cursor-pointer">Contact Saled</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white text-[17px] font-semibold mb-6">Services</h3>
+            <ul class="space-y-4 text-[14px]">
+              <li class="hover:text-white cursor-pointer">Products & Services</li>
+              <li class="hover:text-white cursor-pointer">Customer Stories</li>
+              <li class="hover:text-white cursor-pointer">Download Apps</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white text-[17px] font-semibold mb-6">Information</h3>
+            <ul class="space-y-4 text-[14px]">
+              <li class="hover:text-white cursor-pointer">Privacy Policy</li>
+              <li class="hover:text-white cursor-pointer">Terms & Conditions</li>
+              <li class="hover:text-white cursor-pointer">Join Us</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white text-[17px] font-semibold mb-6">Social Links</h3>
+            <ul class="space-y-4 text-[14px]">
+              <li class="flex items-center gap-3">
+                <span class="bg-white text-black rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold">X</span>
+                @CS — Ticket System
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="bg-white text-black rounded-sm w-5 h-5 flex items-center justify-center text-[10px] font-bold">in</span>
+                @CS — Ticket System
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="bg-white text-black rounded-full w-5 h-5 flex items-center justify-center text-[12px] font-bold">f</span>
+                @CS — Ticket System
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-lg">✉</span>
+                support@cst.com
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mx-auto border-t border-gray-800 mt-16 pt-8 text-center text-[14px]">
+          © 2025 CS — Ticket System. All rights reserved.
+        </div>
+      </footer>
     </>
   )
 }
