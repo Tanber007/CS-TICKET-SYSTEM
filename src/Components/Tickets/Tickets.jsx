@@ -3,7 +3,7 @@ import ShowCard from '../ShowCard/ShowCard';
 import TaskStatus from '../TaskStatus/TaskStatus';
 import ResolveStatus from '../ResolveStatus/ResolveStatus';
 
-const Tickets = ({ ticketsPromise, handleTicketClick, setPurchasedTickets, purchasedTickets }) => {
+const Tickets = ({ ticketsPromise, handleTicketClick, setPurchasedTickets, purchasedTickets, handleCompleteTicket, resolvedTickets }) => {
     const ticketsData = use(ticketsPromise);
 
 
@@ -29,7 +29,13 @@ const Tickets = ({ ticketsPromise, handleTicketClick, setPurchasedTickets, purch
                     <h1 className='text-2xl md:text-4xl font-bold mb-4'>Task Status</h1>
 
                     {
-                        purchasedTickets.map(selectedCard => <TaskStatus selectedCard={selectedCard}></TaskStatus>)
+                        purchasedTickets.map(selectedCard => (
+                            <TaskStatus
+                                key={selectedCard.ticket_id}
+                                selectedCard={selectedCard}
+                                handleCompleteTicket={handleCompleteTicket}
+                            />
+                        ))
                     }
 
 
@@ -37,8 +43,11 @@ const Tickets = ({ ticketsPromise, handleTicketClick, setPurchasedTickets, purch
 
                 <div>
                     <h1 className='text-2xl md:text-4xl font-bold mb-4'>Resolved Status</h1>
-                    
-                    <ResolveStatus></ResolveStatus>
+                    {
+                        resolvedTickets.map(ticket => (
+                            <ResolveStatus key={ticket.ticket_id} ticket={ticket} />
+                        ))
+                    }
                 </div>
 
             </div>
