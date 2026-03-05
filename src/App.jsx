@@ -2,6 +2,7 @@ import { Suspense, useState } from 'react'
 import './App.css'
 import HeroSection from './Components/HeroSection/HeroSection'
 import Tickets from './Components/Tickets/Tickets'
+ import { toast, ToastContainer } from 'react-toastify';
 
 const fetchTickets = async () => {
   const res = await fetch("/tickets.json")
@@ -27,6 +28,8 @@ function App() {
     // Remove from purchased tickets
     setPurchasedTickets(prev => prev.filter(ticket => ticket.ticket_id !== ticketData.ticket_id));
     setIn_Progress(prev => prev - 1);
+
+    toast('Resolved')
 
     // Add to resolved tickets
     setResolvedTickets(prev => [...prev, ticketData]);
@@ -161,6 +164,9 @@ function App() {
           © 2025 CS — Ticket System. All rights reserved.
         </div>
       </footer>
+
+
+      <ToastContainer></ToastContainer>
     </>
   )
 }
