@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ShowCard = ({selectedCard}) => {
-    console.log(selectedCard);
     return (
         <div className="flex justify-center p-4">
             <div className="bg-white rounded-lg shadow-sm p-8 w-full max-w-md border border-gray-50">

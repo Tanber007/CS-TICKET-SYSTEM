@@ -3,8 +3,6 @@ import bgImge2 from "../../assets/vector2.png";
 
 const TicketHero = ({In_Progress}) => {
 
-  
-
   return (
     <div className="p-8 min-h-[300px]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">

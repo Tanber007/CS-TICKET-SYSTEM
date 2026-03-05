@@ -1,7 +1,6 @@
-const ShowCard = ({ cards, handleTicketClick, purchasedTickets, setPurchasedTickets }) => {
+const ShowCard = ({ cards, handleTicketClick }) => {
     
     const handleSelected = (ticketData) => {
-        setPurchasedTickets([...purchasedTickets, ticketData]);
         handleTicketClick(ticketData);
     };
 
@@ -39,7 +38,7 @@ const ShowCard = ({ cards, handleTicketClick, purchasedTickets, setPurchasedTick
                 <div className="flex items-center gap-3">
                     <span className="text-gray-500 font-mono">{cards.ticket_id}</span>
                     <span className={`${priorityStyles[cards.priority]} font-bold`}>
-                        {cards.priority.split()} 
+                        {cards.priority} 
                     </span>
                 </div>
 
